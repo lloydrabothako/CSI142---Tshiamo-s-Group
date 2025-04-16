@@ -43,16 +43,53 @@ public class Product{
   }
 
   //Vendor.java
-
-public class Vendor{
-  private String name;
-  private String region;
-  private double rating;
-
-  //Constructor
-  public Vendor(String name, String region, double rating){
-    this.name = name;
-    this.region = region;
-    this.rating = rating;
-
   
+  public class Vendor {
+    private String name;
+    private String region;
+    private double rating;
+
+    // Default constructor
+    public Vendor() {
+    }
+
+    // Constructor with fields
+    public Vendor(String name, String region, double rating) {
+        this.name = name;
+        this.region = region;
+        this.rating = rating;
+    }
+
+    // Getter and Setter for name
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter and Setter for region
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    // Getter and Setter for rating
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    // Override toString() method for easy display of vendor details
+    @Override
+    public String toString() {
+        return "Vendor [Name: " + name + ", Region: " + region + ", Rating: " + rating + "]";
+    }
+}
