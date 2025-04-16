@@ -7,10 +7,9 @@ public class Product{
   private String category;
   private double price;
   private int quantity;
-  private Vendor vendor;
 
   //constructor
-  public Product(String productName, String category, double price, int quantity, Vendor vendor){
+  public Product(String productName, String category, double price, int quantity){
     this.productName = productName;
     this.category = category;
     this.price = price;
