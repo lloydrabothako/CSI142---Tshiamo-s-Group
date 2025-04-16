@@ -87,7 +87,7 @@ public class Product{
         this.rating = rating;
     }
 
-    // Override toString() method for easy display of vendor details
+    // Override toString() method for easy display of the vendor details
     @Override
     public String toString() {
         return "Vendor [Name: " + name + ", Region: " + region + ", Rating: " + rating + "]";
