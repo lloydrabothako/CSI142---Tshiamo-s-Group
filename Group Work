@@ -3,25 +3,25 @@ We created Product and Vendor for our Local Farmers scenario
 //Product.java
 
 public class Product{
-  private String productName;
+  private String name;
   private String category;
   private double price;
   private int quantity;
 
   //constructor
-  public Product(String productName, String category, double price, int quantity){
-    this.productName = productName;
+  public Product(String name, String category, double price, int quantity){
+    this.productName = name;
     this.category = category;
     this.price = price;
     this.quantity = quantity;
   }
 
   //getters and setters
-  public String getproductName() {
-    return productName;
+  public String getname() {
+    return name;
   }
-  public void setproductName(String productName){
-    this.productName = productName;
+  public void setname(String productname){
+    this.name = name;
   }
   public String getcategory(){
     return category;
