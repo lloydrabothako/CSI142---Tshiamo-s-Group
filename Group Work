@@ -1,0 +1,21 @@
+We created Product and Vendor for our Local Farmers scenario
+
+//Product.java
+
+public class Product{
+  private String productName;
+  private String category;
+  private double price;
+  private int quantity;
+  private Vendor vendor;
+
+  //constructor
+  public Product(String productName, String category, double price, int quantity, Vendor vendor){
+    this.productName = productName;
+    this.category = category;
+    this.price = price;
+    this.quantity = quantity;
+    this.vendor = vendor;
+  }
+
+  //getters and setters
