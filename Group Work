@@ -23,3 +23,36 @@ public class Product{
   public void setproductName(String productName){
     this.productName = productName;
   }
+  public String getcategory(){
+    return category;
+  }
+  public void setcategory(String category){
+    this.category = category;
+  }
+  public double getprice(){
+    return price;
+  }
+  public void setprice(double price){
+    this.price = price;
+  }
+  public int getquantity(){
+    return quantity;
+  }
+  public void setquantity(int quantity){
+    this.quantity = quantity;
+  }
+
+  //Vendor.java
+
+public class Vendor{
+  private String name;
+  private String region;
+  private double rating;
+
+  //Constructor
+  public Vendor(String name, String region, double rating){
+    this.name = name;
+    this.region = region;
+    this.rating = rating;
+
+  
