@@ -14,7 +14,6 @@ public class Product{
     this.category = category;
     this.price = price;
     this.quantity = quantity;
-    this.vendor = vendor;
   }
 
   //getters and setters
