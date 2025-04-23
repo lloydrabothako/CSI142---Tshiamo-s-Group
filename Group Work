@@ -94,3 +94,14 @@ public class Product{
         return "Vendor [Name: " + name + ", Region: " + region + ", Rating: " + rating + "]";
     }
 }
+
+//ProductSorter.java
+
+public class ProductSorter{
+
+    public statit void selectionSortByPrice( Product[] products ){
+       for(int i = 0 ; i< product.length-1 ; i++){
+       int minIndex = i;
+       for(int j = i + 1 ;j < products.length ; j++ ){
+         if ( products[j].getprice() <products[minIndex].getprice()){
+           minIndex = j ;
