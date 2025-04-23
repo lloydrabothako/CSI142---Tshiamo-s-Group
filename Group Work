@@ -93,6 +93,18 @@ public class Product{
     public String toString() {
         return "Vendor [Name: " + name + ", Region: " + region + ", Rating: " + rating + "]";
     }
+//method to perform binary search by price 
+public static Product binarySearchByPrice(Product[] products, double target price){
+  int left = 0;
+  int right = products.length-1;
+
+  while (left <= right){
+    int mid = (left+ right)/2;
+    double midPrice = products[mid].getPrice();
+
+    if(midPrice == targertPrice){
+      return products[mid];
+    } else if (midPrice<)
 }
 
 //ProductSorter.java
