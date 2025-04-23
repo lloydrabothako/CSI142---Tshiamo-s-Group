@@ -110,6 +110,9 @@ public class ProductSorter{
             Product temp = products.get(minIdx);
             products.set(minIdx, products.get(i));
             products.set(i, temp);
+        }
+    }
+
              
 
 
