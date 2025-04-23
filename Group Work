@@ -104,7 +104,13 @@ public static Product binarySearchByPrice(Product[] products, double target pric
 
     if(midPrice == targertPrice){
       return products[mid];
-    } else if (midPrice<)
+    } else if (midPrice<){
+      left = mid+1;
+    }else {
+      right = mid-1;
+    }
+  }
+  return null; //product not found
 }
 
 //ProductSorter.java
