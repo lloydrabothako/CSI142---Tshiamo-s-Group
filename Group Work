@@ -112,6 +112,14 @@ public class ProductSorter{
             products.set(i, temp);
         }
     }
+    // Insertion Sort by Vendor Rating 
+    public static void insertionSortByRating(List<Vendor> vendors) {
+        int n = vendors.size();
+        for (int i = 1; i < n; ++i) {
+            Vendor key = vendors.get(i);
+            int j = i - 1;
+        }
+    }
 
              
 
