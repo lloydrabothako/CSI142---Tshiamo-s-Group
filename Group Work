@@ -161,3 +161,33 @@ public class ProductSorter{
     return -1;  
   }
 }
+
+// NegativeValueException class for exception handling using inheritance
+public class NegativeValueException extends Exception {
+  public NegativeValueException(String message){
+    super(message);
+  }
+}
+
+// An OrganicProduct to extend Product
+
+public clsass OrganicProduct extends Product{
+  private boolean certified;
+
+  public OrganicProduct(String name, String category, double price, int quantity, boolean certified) throws NegativeValueException{
+    super(name, category, price, quantity);
+    this,certified = certified;
+  }
+
+  public boolean isCertified(){
+    return certified;
+  }
+  public void setCertified(boolean certified){
+    this.certified = certified;
+  }
+
+  @Override
+  public String toString(){
+    return super.toString() + ", Certified Organic: " + certified;
+  }
+}
