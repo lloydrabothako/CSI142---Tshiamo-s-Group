@@ -171,7 +171,7 @@ public class NegativeValueException extends Exception {
 
 // An OrganicProduct to extend Product
 
-public clsass OrganicProduct extends Product{
+public class OrganicProduct extends Product{
   private boolean certified;
 
   public OrganicProduct(String name, String category, double price, int quantity, boolean certified) throws NegativeValueException{
@@ -190,4 +190,63 @@ public clsass OrganicProduct extends Product{
   public String toString(){
     return super.toString() + ", Certified Organic: " + certified;
   }
+}
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Testing Products
+            Product[] products = {
+                new Product("Brocolli", "Vegetable", 2.1, 150),
+                new Product("Potato", "Vegetable", 1.8, 80),
+                new Product("Banana", "Fruit", 2.0, 50)
+            };
+
+            System.out.println("Before Sorting Products by Price:");
+            for (Product p : products) System.out.println(p);
+
+            ProductSorter.selectionSortByPrice(products);
+
+            System.out.println("\nAfter Sorting Products by Price:");
+            for (Product p : products) System.out.println(p);
+
+            double targetPrice = 1.8;
+            Product foundProduct = ProductSorter.binarySearchByPrice(products, targetPrice);
+            System.out.println("\nBinary Search Result for price " + targetPrice + ": " + (foundProduct != null ? foundProduct : "Not found"));
+
+            // Linear search
+            String targetName = "Potato";
+            int index = ProductSorter.linearSearchByName(products, targetName);
+            System.out.println("\nLinear Search Result for name '" + targetName + "': " + (index != -1 ? products[index] : "Not found"));
+
+            // Organic product (polymorphism)
+            OrganicProduct organic = new OrganicProduct("Banana", "Fruit", 3.2, 30, true);
+            System.out.println("\nOrganic Product: " + organic);
+
+            // Vendors
+            List<Vendor> vendors = new ArrayList<>();
+            vendors.add(new Vendor("Farmer Joe", "North", 4.2));
+            vendors.add(new Vendor("GreenGrow", "East", 3.5));
+            vendors.add(new Vendor("AgriFresh", "South", 4.8));
+
+            System.out.println("\nBefore Sorting Vendors by Rating:");
+            for (Vendor v : vendors) System.out.println(v);
+
+            ProductSorter.insertionSortByRating(vendors);
+
+            System.out.println("\nAfter Sorting Vendors by Rating:");
+            for (Vendor v : vendors) System.out.println(v);
+
+            // Trigger custom exception
+            Product badProduct = new Product("BadItem", "Waste", -1.0, 10);
+
+        } catch (NegativeValueException e) {
+            System.err.println("Custom Exception Caught: " + e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
