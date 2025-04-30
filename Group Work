@@ -9,7 +9,7 @@ public class Product{
   private int quantity;
   }
 
-  //constructor
+  //Constructor
   public Product(String name, String category, double price, int quantity){
     this.productName = name;
     this.category = category;
@@ -17,7 +17,7 @@ public class Product{
     this.quantity = quantity;
   }
 
-  //getters and setters
+  //Getters and Setters
   public String getName() {
     return name;
   }
@@ -48,102 +48,107 @@ public class Product{
   return "Product [Name: " + name + ", Category: " + category + ", Price: " + price + ", Quantity: " + quantity+ "]";
 }
 
-  //Vendor.java
+//Vendor.java
   
-  public class Vendor {
-    private String name;
-    private String region;
-    private double rating;
+public class Vendor {
+  private String name;
+  private String region;
+  private double rating;
 
-    // Default constructor
-    public Vendor() {
-    }
-
-    // Constructor with fields
-    public Vendor(String name, String region, double rating) {
-        this.name = name;
-        this.region = region;
-        this.rating = rating;
-    }
-
-    // Getter and Setter for name
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    // Getter and Setter for region
-    public String getRegion() {
-        return region;
-    }
-
-    public void setRegion(String region) {
-        this.region = region;
-    }
-
-    // Getter and Setter for rating
-    public double getRating() {
-        return rating;
-    }
-
-    public void setRating(double rating) {
-        this.rating = rating;
-    }
-
-    // Override toString() method for easy display of the vendor details
-    @Override
-    public String toString() {
-        return "Vendor [Name: " + name + ", Region: " + region + ", Rating: " + rating + "]";
-    }
-//method to perform binary search by price 
-public static Product binarySearchByPrice(Product[] products, double target price){
-  int left = 0;
-  int right = products.length-1;
-
-  while (left <= right){
-    int mid = (left+ right)/2;
-    double midPrice = products[mid].getPrice();
-
-    if(midPrice == targertPrice){
-      return products[mid];
-    } else if (midPrice<){
-      left = mid+1;
-    }else {
-      right = mid-1;
-    }
+  // Default constructor
+  public Vendor() {
   }
-  return null; //product not found
+
+  // Constructor with fields
+  public Vendor(String name, String region, double rating) {
+      this.name = name;
+      this.region = region;
+      this.rating = rating;
+  }
+
+  // Getter and Setter for name
+  public String getName() {
+      return name;
+  }
+
+  public void setName(String name) {
+      this.name = name;
+  }
+
+  // Getter and Setter for region
+  public String getRegion() {
+      return region;
+  }
+
+  public void setRegion(String region) {
+      this.region = region;
+  }
+
+  // Getter and Setter for rating
+  public double getRating() {
+      return rating;
+  }
+
+  public void setRating(double rating) {
+      this.rating = rating;
+  }
+
+  // Override toString() method for easy display of the vendor details
+  @Override
+  public String toString() {
+      return "Vendor [Name: " + name + ", Region: " + region + ", Rating: " + rating + "]";
+  }
 }
 
 //ProductSorter.java
 
 public class ProductSorter{
 
-    public static void selectionSortByPrice( Product[] products ){
-       for(int i = 0 ; i< product.length-1 ; i++){
+  public static void selectionSortByPrice( Product[] products ){
+     for(int i = 0 ; i< product.length-1 ; i++){
        int minIndex = i;
        for(int j = i + 1 ;j < products.length ; j++ ){
          if ( products[j].getprice() <products[minIndex].getprice()){
            minIndex = j ;
 
-            // Swap
-            Product temp = products.get(minIdx);
-            products.set(minIdx, products.get(i));
-            products.set(i, temp);
+          // Swap
+          Product temp = products.get(minIdx);
+          products.set(minIdx, products.get(i));
+          products.set(i, temp);
+          }
+      }
+  }
+  // Insertion Sort by Vendor Rating 
+  public static void insertionSortByRating(List<Vendor> vendors) {
+      int n = vendors.size();
+      for (int i = 1; i < n; ++i) {
+          Vendor key = vendors.get(i);
+          int j = i - 1;
+      }
+  }
+
+    //Method to perform binary search by price 
+    public static Product binarySearchByPrice(Product[] products, double target price){
+      int left = 0;
+      int right = products.length-1;
+    
+      while (left <= right){
+        int mid = (left+ right)/2;
+        double midPrice = products[mid].getPrice();
+    
+        if(midPrice == targertPrice){
+          return products[mid];
+        } else if (midPrice<){
+          left = mid+1;
+        }else {
+          right = mid-1;
         }
+      }
+      return null; //product not found
     }
-    // Insertion Sort by Vendor Rating 
-    public static void insertionSortByRating(List<Vendor> vendors) {
-        int n = vendors.size();
-        for (int i = 1; i < n; ++i) {
-            Vendor key = vendors.get(i);
-            int j = i - 1;
-        }
-    }
-
-             
-
-
+    public static int linearSearchByName(Product[] products, String name){
+      for (int i = 0; i <products.length; i++){
+        if (products[i].getName90.)
+      }
+  }
+}
