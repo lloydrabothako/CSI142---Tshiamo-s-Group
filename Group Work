@@ -34,7 +34,6 @@ public class Product{
   }
   public void setPrice(double price){
     if (price < 0) throw new NegativeValueException("Price must be non-negative!");
-  }
       this.price = price;
   }
   public int getQuantity(){
@@ -44,12 +43,12 @@ public class Product{
     if (quantity < 0) throw new NegativeValueException("Quantity must be non-negative!");
       this.quantity = quantity;
   }
-  }
+  
   @Override
   public String toString(){
   return "Product [Name: " + name + ", Category: " + category + ", Price: " + price + ", Quantity: " + quantity+ "]";
+  }
 }
-
 
 
 
