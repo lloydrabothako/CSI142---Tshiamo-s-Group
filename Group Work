@@ -18,10 +18,10 @@ public class Product{
   }
 
   //getters and setters
-  public String getname() {
+  public String getName() {
     return name;
   }
-  public void setname(String productname){
+  public void setName(String productname){
     this.name = name;
   }
   public String getcategory(){
@@ -34,14 +34,19 @@ public class Product{
     return price;
   }
   public void setprice(double price){
+    if (price < 0) throw new IllegalArgumentException("Price must be non-negative!");
     this.price = price;
   }
   public int getquantity(){
     return quantity;
   }
   public void setquantity(int quantity){
+    if (quantity < 0) throw new IllegalArgumentException("Quantity must be non-negative!");
     this.quantity = quantity;
-  }
+  @Override
+  public String toString(){
+  return "Product [Name: " + name + ", Category: " + category + ", Price: " + price + ", Quantity: " + quantity+ "]";
+}
 
   //Vendor.java
   
